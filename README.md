@@ -1,0 +1,5 @@
+```
+# bower install
+
+# gulp serve
+```
