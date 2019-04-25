@@ -7,11 +7,7 @@ angular.module('angularJsDemo').directive('onFinishRender', ['$rootScope', '$int
       link: function(scope, element, attr) {
         if (scope.$last === true) {
           $timeout(function() {
-            scope.$emit('ngRepeatFinished'); //事件通知
-            // var fun = $scope.$eval(attrs.onFinishRender);
-            // if (fun && typeof(fun) == 'function') {
-            //   fun(); //回调函数
-            // }
+            scope.$emit('ngRepeatFinished');
           });
         }
       }

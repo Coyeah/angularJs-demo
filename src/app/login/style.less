@@ -1,0 +1,41 @@
+.login-layout {
+  padding-top: 30px;
+
+  & h2 {
+    text-align: center;
+  }
+
+  & form {
+    box-sizing: border-box;
+    padding: 30px;
+    margin: 60px 30%;
+
+    & label, & input, & button {
+      display: block;
+      width: 100%;
+    }
+
+    & input {
+      padding: 3px;
+      border: 2px solid #888;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    & button {
+      font-weight: bold;
+      margin-top: 30px;
+      padding: 20px 0;
+      background-color: #fff;
+      outline: none;
+      border: 2px solid #888;
+      border-radius: 5px;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #888;
+        color: #fff;
+      }
+    }
+  }
+}

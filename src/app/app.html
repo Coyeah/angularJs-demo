@@ -1,7 +1,7 @@
 <div id="layout">
-  <div class="top"><div ui-view="top"></div></div>
-  <div class="content">
-    <div class="left" ui-view="left"></div>
-    <div class="right" ui-view="right"></div>
+  <div class="layout-header border"><div ui-view="header"></div></div>
+  <div class="layout-content">
+    <div class="layout-content-menu border" ui-view="menu"></div>
+    <div class="layout-content-main border" ui-view="main"></div>
   </div>
 </div>

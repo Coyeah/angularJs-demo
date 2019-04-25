@@ -1,0 +1,21 @@
+<div class="chat-list" id="chat-list">
+  <!-- ng-repeat 是 angularJs 循环指令，track by 是创建独立的索引，该索引不是以位置定位 -->
+  <div ng-repeat="item in $root.chatRecords track by $index" class="chat-record" ng-class="{'from-fans':item.fromFans}" on-finish-render>
+    <div class="chat-time">{{item.createTime | format}}<div>
+    <div class="chat-header"><div class="chat-avatar" ng-style="{'background-image':'url({{item.content.userInfo.head}})'}"></div></div>
+    <div class="chat-body">
+      <div class="chat-wrapper" ng-if="item.msgType=='text'">
+        {{item.content.body.message}}
+      </div>
+      <div class="chat-wrapper" ng-if="item.msgType=='image'">
+        <img class="msg-image" ng-src="{{item.content.body.message.url}}" alt="">
+      </div>
+      <div class="chat-wrapper" ng-if="item.msgType=='video'">
+        <div video-in-msg-list options="item.content.body.message"></div>
+      </div>
+      <div class="chat-wrapper" ng-if="item.msgType=='voice'">
+        <div audio-in-msg-list msg="item.content.body.message"></div>
+      </div>
+    </div>
+  </div>
+</div>

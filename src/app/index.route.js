@@ -38,17 +38,17 @@
       .state('app.home', {
         url: '/home',
         views: {                                    // 视图引入
-          top: {
-            templateUrl: 'app/main/top/top.html',
-            controller: 'TopController',
+          header: {
+            templateUrl: 'app/main/header/header.html',
+            controller: 'HeaderController',
           },
-          left: {
-            templateUrl: 'app/main/left/left.html',
-            controller: 'LeftController',
+          menu: {
+            templateUrl: 'app/main/menu/menu.html',
+            controller: 'MenuController',
           },
-          right: {
-            templateUrl: 'app/main/right/right.html',
-            controller: 'RightController',
+          main: {
+            templateUrl: 'app/main/main/main.html',
+            controller: 'MainController',
           }
         }
       })

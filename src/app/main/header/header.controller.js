@@ -3,10 +3,10 @@
 
   angular
     .module('angularJsDemo')
-    .controller('TopController', TopController);
+    .controller('HeaderController', HeaderController);
 
   /** @ngInject */
-  function TopController($scope, toastr, $cookies, $rootScope, $state) {
+  function HeaderController($scope, toastr, $cookies, $rootScope, $state) {
     $scope.logout = function () {
       $cookies.remove("token");
       $state.go("login");

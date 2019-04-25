@@ -1,10 +1,9 @@
 'use strict'
 
-angular.module('angularJsDemo').filter('timeFormat', function() {
+angular.module('angularJsDemo').filter('format', function() {
     return function(date) {
       var temp = date.split(' ');
-      temp[0] = temp[0].split('-').join('/');
-      var now = moment().format('YYYY/MM/DD');
+      var now = moment().format('YYYY-MM-DD');
       if (now == temp[0]) {
         temp.shift();
       }
